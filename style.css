@@ -1,0 +1,282 @@
+.navbar.bg-light {
+  background-color: #0078ab !important;
+
+  .form-control {
+    border-radius: 4.25rem;
+  }
+}
+
+/* change font to 72_Sarchia_Qaisy this is kurdish font; */
+@font-face {
+  font-family: "72_Sarchia_Qaisy";
+  src: url('72_Sarchia_Qaisy.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "72_Sarchia_Qaisy", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* This ensures that the footer is at the bottom of the viewport. */
+}
+
+.content {
+  flex-grow: 1;
+  min-height: 100vh;
+  /* This pushes the footer to the bottom of the page. */
+}
+
+/* Add your existing styles here for the footer, social media links, and other elements. */
+
+a {
+  font-size: 18px !important;
+  font-family: "72_Sarchia_Qaisy", Arial, sans-serif;
+}
+
+/* Define the styles for the anchor elements in the navbar */
+.navbar-nav .nav-item a {
+  color: #333;
+  /* Set the default text color */
+  text-decoration: none;
+  /* Remove underlines by default */
+  padding: 10px 15px;
+  /* Add padding for spacing */
+  display: inline-block;
+  /* Display as a block for better spacing */
+  font-weight: bold;
+  /* Make the text bold */
+  transition: color 0.3s;
+  /* Add smooth transition for text color */
+}
+
+.log-frm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.login-form {
+  width: 400px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------Nav Hover ----------- */
+
+/* Define the styles for the anchor elements in the navbar */
+.navbar-nav .lineHov a {
+  color: #ffeb3b;
+  /* Set the default text color */
+  text-decoration: none;
+  /* Remove underlines by default */
+  padding: 10px 15px;
+  /* Add padding for spacing */
+  display: inline-block;
+  /* Display as a block for better spacing */
+  font-weight: bold;
+  /* Make the text bold */
+  position: relative;
+  /* Position relative for pseudo-element */
+}
+
+/* Create a pseudo-element for the magical effect */
+.navbar-nav .lineHov a::before {
+  content: '';
+  /* Empty content */
+  position: absolute;
+  top: 100%;
+  /* Position at the bottom of the anchor element */
+  left: 0;
+  /* Position at the left of the anchor element */
+  width: 100%;
+  /* Initial width covers the anchor element */
+  height: 5px;
+  /* Initial height (subtle underline) */
+  background: #ffeb3b;
+  /* Magic color (e.g., pink) */
+  transition: width 0.3s, transform 0.3s, opacity 0.3s;
+  /* Smooth width, transform, and opacity transitions */
+  transform: scaleX(0);
+  /* Initial horizontal scale (0) */
+  transform-origin: left;
+  /* Transform origin at the left */
+  opacity: 0;
+  /* Initial opacity (0) */
+}
+
+/* Define the styles for the anchor elements when hovered */
+.navbar-nav .lineHov a:hover {
+  color: #ffeb3b;
+  /* Change the text color to the magic color on hover */
+}
+
+/* Define the styles for the pseudo-element when hovered */
+.navbar-nav .lineHov a:hover::before {
+  width: 100%;
+  /* Expand the width to cover the anchor element */
+  transform: scaleX(1);
+  /* Expand horizontally (scale to 1) */
+  opacity: 1;
+  /* Increase opacity for a beautiful appearance */
+}
+
+
+/* --------- list of fliter nav hover */
+
+/* Define the styles for the anchor element within the list item */
+.nav-item.dropdown a {
+  color: #333;
+  /* Set the default text color */
+  text-decoration: none;
+  /* Remove underlines by default */
+  padding: 10px 15px;
+  /* Add padding for spacing */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  /* Add smooth transitions for background, transform, and shadow */
+  display: inline-block;
+  /* Display as a block for better spacing */
+  border: none;
+  /* Remove the border */
+  font-weight: bold;
+  /* Make the text bold */
+}
+
+/* Define the styles for the anchor element when hovered */
+.nav-item.dropdown a:hover {
+  background-color: #ffeb3b;
+  /* Change the background color to a warning-like color (e.g., yellow) */
+  color: #333;
+  /* Change the text color to a darker color for better contrast */
+  transform: translateY(-5px);
+  /* Add a slight upward movement effect for interactivity */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* Add a subtle shadow for depth */
+}
+
+
+/* Magic link styling for name wasta samad */
+.magic-link strong {
+  color: #ff69b4;
+  /* Initial text color (magic color) */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  transition: color 0.3s;
+  /* Smooth color transition on hover */
+}
+
+/* Magic hover effect */
+.magic-link strong:hover {
+  color: #3498db;
+  /* New text color on hover (e.g., blue) */
+  animation: magic 1s linear infinite;
+}
+
+@keyframes magic {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/*  Footer Design */
+/* Styling for the magic footer */
+.magic-footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.magic-footer h4 {
+  color: #fff;
+}
+
+.magic-footer p {
+  font-size: 14px;
+}
+
+.magic-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Styling for the copyright notice */
+.footer-copyright {
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Styling for the map container */
+#map {
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* ----- */
+
+/*  */
+/* Styling for the social media container */
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content; /* Adjust the height as needed */
+}
+
+/* Styling for the social media list */
+.social-list {
+  list-style: none;
+  padding: 5;
+}
+
+.social-list li {
+  margin-bottom: 15px; /* Increased margin for spacing */
+}
+
+/* Styling for the social media links */
+.social-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #d7d7d7;
+  transition: color 0.3s;
+  padding: 10px;
+}
+
+.social-link img {
+  width: 24px; /* Set the width of the image icons */
+  height: 25px; /* Set the height of the image icons */
+  margin-left: 40px; /* Adjust margin as needed */
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center !important;
+  text-decoration: none;
+}
+
+.social-link:hover img {
+  transform: scale(1.3); /* Increase the size on hover */
+}
+
+.social-link span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Hover effect for changing the image on hover */
+.social-link:hover img {
+  content: attr(data-hover); /* Change the image on hover */
+}
